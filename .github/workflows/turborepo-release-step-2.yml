@@ -68,6 +68,8 @@ jobs:
       - uses: ./.github/actions/setup-go
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Install JQ
+        uses: mbround18/install-jq@v1
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v3
         with:
