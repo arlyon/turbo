@@ -56,23 +56,23 @@ turborepo-ffi-copy-bindings:
 
 .PHONY: turborepo-ffi-install-win
 turborepo-ffi-install-win: turborepo-ffi-win turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/x86_64-pc-windows-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_Windows_amd64.a
+	node copy.js ../crates/turborepo-ffi/target/x86_64-pc-windows-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_windows_amd64.a
 
 .PHONY: turborepo-ffi-install-darwin-arm64
 turborepo-ffi-install-darwin-arm64: turborepo-ffi-darwin-arm64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/aarch64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_Darwin_arm64.a
+	node copy.js ../crates/turborepo-ffi/target/aarch64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_darwin_arm64.a
 
 .PHONY: turborepo-ffi-install-darwin-amd64
 turborepo-ffi-install-darwin-amd64: turborepo-ffi-darwin-amd64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/x86_64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_Darwin_amd64.a
+	node copy.js ../crates/turborepo-ffi/target/x86_64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_darwin_amd64.a
 
 .PHONY: turborepo-ffi-install-linux-arm64
 turborepo-ffi-install-linux-arm64: turborepo-ffi-linux-arm64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/aarch64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_Linux_arm64.a
+	node copy.js ../crates/turborepo-ffi/target/aarch64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_arm64.a
 
 .PHONY: turborepo-ffi-install-linux-amd64
 turborepo-ffi-install-linux-amd64: turborepo-ffi-linux-amd64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/x86_64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_Linux_amd64.a
+	node copy.js ../crates/turborepo-ffi/target/x86_64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_amd64.a
 
 .PHONY: turborepo-ffi-win
 turborepo-ffi-win:

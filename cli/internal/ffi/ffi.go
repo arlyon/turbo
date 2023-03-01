@@ -5,15 +5,15 @@ package ffi
 // #cgo LDFLAGS: -L${SRCDIR}
 //
 // #cgo darwin LDFLAGS: -lz -liconv
-// #cgo darwin,arm64 LDFLAGS: -lturborepo_ffi_Darwin_arm64
-// #cgo darwin,amd64 LDFLAGS: -lturborepo_ffi_Darwin_amd64
+// #cgo darwin,arm64 LDFLAGS: -lturborepo_ffi_darwin_arm64
+// #cgo darwin,amd64 LDFLAGS: -lturborepo_ffi_darwin_amd64
 //
 // #cgo linux LDFLAGS: -lz
-// #cgo linux,arm64 LDFLAGS: -lturborepo_ffi_Linux_arm64
-// #cgo linux,amd64 LDFLAGS: -lturborepo_ffi_Linux_amd64
+// #cgo linux,arm64 LDFLAGS: -lturborepo_ffi_linux_arm64
+// #cgo linux,amd64 LDFLAGS: -lturborepo_ffi_linux_amd64
 //
 // #cgo windows LDFLAGS: -lole32 -lbcrypt -lws2_32 -luserenv
-// #cgo windows,amd64 LDFLAGS: -lturborepo_ffi_Windows_amd64
+// #cgo windows,amd64 LDFLAGS: -lturborepo_ffi_windows_amd64
 import "C"
 
 import (
