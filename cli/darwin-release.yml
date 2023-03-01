@@ -14,7 +14,8 @@ builds:
     binary: bin/go-turbo
     hooks:
       pre:
-        - make turborepo-ffi-install-{{ .Runtime.Goos }}-{{ .Runtime.Goarch }}
+        - cmd: make turborepo-ffi-install-{{ .Runtime.Goos }}-{{ .Runtime.Goarch }}
+          output: true
     flags:
       - -trimpath
     ldflags:
