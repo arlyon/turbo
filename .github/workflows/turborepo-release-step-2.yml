@@ -40,7 +40,6 @@ jobs:
       - run: |
           rustup target add x86_64-apple-darwin
           rustup target add aarch64-apple-darwin
-      - uses: taiki-e/install-action@cross
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v3
         with:
@@ -82,6 +81,7 @@ jobs:
       - run: |
           curl -L https://github.com/arlyon/turbo/releases/download/zlib/libz.a > /usr/x86_64-w64-mingw32/lib/libz.a
           curl -L https://github.com/nicholaslyang/turbo/releases/download/zlib-aarch64-linux-musl/libz.a > /usr/aarch64-linux-gnu/lib/libz.a
+          curl -L https://github.com/nicholaslyang/turbo/releases/download/zlib-x86_64-linux-musl/libz.a > /usr/x86_64-linux-gnu/lib/libz.a
 
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v3
