@@ -76,23 +76,23 @@ turborepo-ffi-install-linux-amd64: turborepo-ffi-linux-amd64 turborepo-ffi-copy-
 
 .PHONY: turborepo-ffi-windows-amd64
 urborepo-ffi-windows-amd64:
-	cd ../crates/turborepo-ffi && cross build --release --target-dir ./target --target x86_64-pc-windows-gnu
+	cd ../crates/turborepo-ffi && cargo build --release --target-dir ./target --target x86_64-pc-windows-gnu
 
 .PHONY: turborepo-ffi-darwin-arm64
 turborepo-ffi-darwin-arm64:
-	cd ../crates/turborepo-ffi && cross build --release --target-dir ./target --target aarch64-apple-darwin
+	cd ../crates/turborepo-ffi && cargo build --release --target-dir ./target --target aarch64-apple-darwin
 
 .PHONY: turborepo-ffi-darwin-amd64
 turborepo-ffi-darwin-amd64:
-	cd ../crates/turborepo-ffi && cross build --release --target-dir ./target --target x86_64-apple-darwin
+	cd ../crates/turborepo-ffi && cargo build --release --target-dir ./target --target x86_64-apple-darwin
 
 .PHONY: turborepo-ffi-linux-arm64
 turborepo-ffi-linux-arm64:
-	cd ../crates/turborepo-ffi && cross build --release --target-dir ./target --target aarch64-unknown-linux-gnu
+	cd ../crates/turborepo-ffi && cargo build --release --target-dir ./target --target aarch64-unknown-linux-gnu
 
 .PHONY: turborepo-ffi-linux-amd64
 turborepo-ffi-linux-amd64:
-	cd ../crates/turborepo-ffi && cross build --release --target-dir ./target --target x86_64-unknown-linux-gnu
+	cd ../crates/turborepo-ffi && cargo build --release --target-dir ./target --target x86_64-unknown-linux-gnu
 
 #
 # end
