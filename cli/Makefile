@@ -68,11 +68,11 @@ turborepo-ffi-install-darwin-amd64: turborepo-ffi-darwin-amd64 turborepo-ffi-cop
 
 .PHONY: turborepo-ffi-install-linux-arm64
 turborepo-ffi-install-linux-arm64: turborepo-ffi-linux-arm64 turborepo-ffi-copy-bindings
-	cp ../crates/turborepo-ffi/target/aarch64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_arm64.a
+	cp ../crates/turborepo-ffi/target/aarch64-unknown-linux-musl/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_arm64.a
 
 .PHONY: turborepo-ffi-install-linux-amd64
 turborepo-ffi-install-linux-amd64: turborepo-ffi-linux-amd64 turborepo-ffi-copy-bindings
-	cp ../crates/turborepo-ffi/target/x86_64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_amd64.a
+	cp ../crates/turborepo-ffi/target/x86_64-unknown-linux-musl/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_amd64.a
 
 .PHONY: turborepo-ffi-windows-amd64
 turborepo-ffi-windows-amd64:
