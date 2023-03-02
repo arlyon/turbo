@@ -55,7 +55,7 @@ turborepo-ffi-copy-bindings:
 #
 
 .PHONY: turborepo-ffi-install-windows-amd64
-turborepo-ffi-install-windows-amd64: urborepo-ffi-windows-amd64 turborepo-ffi-copy-bindings
+turborepo-ffi-install-windows-amd64: turborepo-ffi-windows-amd64 turborepo-ffi-copy-bindings
 	cp ../crates/turborepo-ffi/target/x86_64-pc-windows-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_windows_amd64.a
 
 .PHONY: turborepo-ffi-install-darwin-arm64
