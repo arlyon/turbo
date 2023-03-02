@@ -40,11 +40,11 @@ turborepo-ffi:
 
 .PHONY: turborepo-ffi-install
 turborepo-ffi-install: turborepo-ffi turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_$(GOOS)_$(GOARCH).a
+	cp ../crates/turborepo-ffi/target/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_$(GOOS)_$(GOARCH).a
 
 .PHONY: turborepo-ffi-copy-bindings
 turborepo-ffi-copy-bindings:
-	node copy.js ../crates/turborepo-ffi/bindings.h ./internal/ffi/bindings.h
+	cp ../crates/turborepo-ffi/bindings.h ./internal/ffi/bindings.h
 
 #
 # ffi cross compiling
@@ -55,24 +55,24 @@ turborepo-ffi-copy-bindings:
 #
 
 .PHONY: turborepo-ffi-install-windows-amd64
-urborepo-ffi-install-windows-amd64: urborepo-ffi-windows-amd64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/x86_64-pc-windows-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_windows_amd64.a
+turborepo-ffi-install-windows-amd64: urborepo-ffi-windows-amd64 turborepo-ffi-copy-bindings
+	cp ../crates/turborepo-ffi/target/x86_64-pc-windows-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_windows_amd64.a
 
 .PHONY: turborepo-ffi-install-darwin-arm64
 turborepo-ffi-install-darwin-arm64: turborepo-ffi-darwin-arm64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/aarch64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_darwin_arm64.a
+	cp ../crates/turborepo-ffi/target/aarch64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_darwin_arm64.a
 
 .PHONY: turborepo-ffi-install-darwin-amd64
 turborepo-ffi-install-darwin-amd64: turborepo-ffi-darwin-amd64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/x86_64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_darwin_amd64.a
+	cp ../crates/turborepo-ffi/target/x86_64-apple-darwin/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_darwin_amd64.a
 
 .PHONY: turborepo-ffi-install-linux-arm64
 turborepo-ffi-install-linux-arm64: turborepo-ffi-linux-arm64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/aarch64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_arm64.a
+	cp ../crates/turborepo-ffi/target/aarch64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_arm64.a
 
 .PHONY: turborepo-ffi-install-linux-amd64
 turborepo-ffi-install-linux-amd64: turborepo-ffi-linux-amd64 turborepo-ffi-copy-bindings
-	node copy.js ../crates/turborepo-ffi/target/x86_64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_amd64.a
+	cp ../crates/turborepo-ffi/target/x86_64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_amd64.a
 
 .PHONY: turborepo-ffi-windows-amd64
 urborepo-ffi-windows-amd64:
