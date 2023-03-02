@@ -21,7 +21,7 @@ builds:
       - CGO_ENABLED=1
     hooks:
       pre:
-        - cmd: make turborepo-ffi-install-{{ .Runtime.Goos }}-{{ .Runtime.Goarch }}
+        - cmd: make turborepo-ffi-install-{{ .Os }}-{{ .Arch }}
           output: true
     targets:
       - linux_arm64
