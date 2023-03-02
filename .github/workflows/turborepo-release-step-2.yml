@@ -36,6 +36,9 @@ jobs:
       - uses: ./.github/actions/setup-go
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-apple-darwin,aarch64-apple-darwin
       - uses: taiki-e/install-action@cross
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v3
