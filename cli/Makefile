@@ -10,8 +10,8 @@ else
 endif
 
 # for some reason go env inserts a newline, so parse w/ jq
-GOARCH:=$(shell go env -json GOARCH | jq -r .GOARCH)
-GOOS:=$(shell go env -json GOOS | jq -r .GOOS)
+GOARCH:=$(shell go env GOARCH | xargs)
+GOOS:=$(shell go env GOOS | xargs)
 
 # Strip debug info
 GO_FLAGS += "-ldflags=-s -w"
