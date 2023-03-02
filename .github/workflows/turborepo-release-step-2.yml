@@ -69,6 +69,7 @@ jobs:
       - uses: ./.github/actions/setup-go
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@cross
       - name: Install JQ
         uses: mbround18/install-jq@v1
