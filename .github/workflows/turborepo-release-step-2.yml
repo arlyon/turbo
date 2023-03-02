@@ -81,7 +81,7 @@ jobs:
       - run: apt install zlib1g
       - run: |
           curl -L https://github.com/arlyon/turbo/releases/download/zlib/libz.a > /usr/x86_64-w64-mingw32/lib/libz.a
-          curl -L https://github.com/nicholaslyang/turbo/releases/download/zlib-aarch64-linux-musl/libz.a > /usr/aarch64-linux-musl/lib/libz.a
+      #          curl -L https://github.com/nicholaslyang/turbo/releases/download/zlib-aarch64-linux-musl/libz.a > /usr/aarch64-linux-musl/lib/libz.a
       - name: Install JQ
         uses: mbround18/install-jq@v1
       - run: chmod +x $(which jq)
