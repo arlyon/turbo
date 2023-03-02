@@ -75,7 +75,7 @@ turborepo-ffi-install-linux-amd64: turborepo-ffi-linux-amd64 turborepo-ffi-copy-
 	cp ../crates/turborepo-ffi/target/x86_64-unknown-linux-gnu/release/libturborepo_ffi.a ./internal/ffi/libturborepo_ffi_linux_amd64.a
 
 .PHONY: turborepo-ffi-windows-amd64
-urborepo-ffi-windows-amd64:
+turborepo-ffi-windows-amd64:
 	cd ../crates/turborepo-ffi && cargo build --release --target-dir ./target --target x86_64-pc-windows-gnu
 
 .PHONY: turborepo-ffi-darwin-arm64
