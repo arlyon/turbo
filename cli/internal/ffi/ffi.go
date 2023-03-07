@@ -25,7 +25,7 @@ func Unmarshal[M proto.Message](b C.Buffer, c M) error {
 		return err
 	}
 
-	b.Free()
+	C.free_buffer(b)
 
 	return nil
 }

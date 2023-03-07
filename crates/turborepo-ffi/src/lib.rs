@@ -11,6 +11,16 @@ pub struct Buffer {
     data: *mut u8,
 }
 
+#[no_mangle]
+pub extern "C" fn free_buffer(buffer: Buffer) {
+    // SAFETY
+    // we are responsible for freeing the memory allocated on the rust side
+    // we do this by converting the raw pointer to a Vec and letting it drop
+    // this is safe because we know that the memory was allocated by rust
+    // and that the length is correct
+    let _ = unsafe { Vec::from_raw_parts(buffer.data, buffer.len as usize, buffer.len as usize) };
+}
+
 impl<T: prost::Message> From<T> for Buffer {
     fn from(value: T) -> Self {
         let mut bytes = ManuallyDrop::new(value.encode_to_vec());
